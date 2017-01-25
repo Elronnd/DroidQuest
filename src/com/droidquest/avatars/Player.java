@@ -338,13 +338,13 @@ public class Player extends Item implements Avatar {
     }
 
     public boolean KeyUp(KeyEvent e) {
-        if (e.getKeyCode() == KeyEvent.VK_L && handleLoadSmallChip()) {
+        if (e.getKeyCode() == KeyEvent.VK_A && handleLoadSmallChip()) {
             return false;
         }
         else if (e.getKeyCode() == KeyEvent.VK_C && handleGameCursor()) {
             return false;
         }
-        else if (e.getKeyCode() == KeyEvent.VK_H && handleHotCursor()) {
+        else if (e.getKeyCode() == KeyEvent.VK_G && handleHotCursor()) {
             return false;
         }
         else if (e.getKeyCode() == KeyEvent.VK_S && handleSolderPen()) {
@@ -362,16 +362,16 @@ public class Player extends Item implements Avatar {
         else if (e.getKeyCode() == KeyEvent.VK_SLASH && handleHelp()) {
             return false;
         }
-        else if (e.getKeyCode() == KeyEvent.VK_RIGHT && handleMoveRight(e.isShiftDown(), (e.getModifiers() & shortcut_modifier) > 0)) {
+        else if (e.getKeyCode() == KeyEvent.VK_L && handleMoveRight(e.isShiftDown(), (e.getModifiers() & shortcut_modifier) > 0)) {
             return true;
         }
-        else if (e.getKeyCode() == KeyEvent.VK_LEFT && handleMoveLeft(e.isShiftDown(), (e.getModifiers() & shortcut_modifier) > 0)) {
+        else if (e.getKeyCode() == KeyEvent.VK_H && handleMoveLeft(e.isShiftDown(), (e.getModifiers() & shortcut_modifier) > 0)) {
             return true;
         }
-        else if (e.getKeyCode() == KeyEvent.VK_UP && handleMoveUp(e.isShiftDown(), (e.getModifiers() & shortcut_modifier) > 0)) {
+        else if (e.getKeyCode() == KeyEvent.VK_K && handleMoveUp(e.isShiftDown(), (e.getModifiers() & shortcut_modifier) > 0)) {
             return true;
         }
-        else if (e.getKeyCode() == KeyEvent.VK_DOWN && handleMoveDown(e.isShiftDown(), (e.getModifiers() & shortcut_modifier) > 0)) {
+        else if (e.getKeyCode() == KeyEvent.VK_J && handleMoveDown(e.isShiftDown(), (e.getModifiers() & shortcut_modifier) > 0)) {
             return true;
         }
         else if (e.getKeyCode() == KeyEvent.VK_SPACE && handlePickupDrop()) {
@@ -454,22 +454,22 @@ public class Player extends Item implements Avatar {
     }
 
     public boolean KeyDown(KeyEvent e) {
-        if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
+        if (e.getKeyCode() == KeyEvent.VK_L) {
             if (handleRepeatRight((e.getModifiers() & shortcut_modifier) > 0)) {
                 return true;
             }
         }
-        else if (e.getKeyCode() == KeyEvent.VK_LEFT) {
+        else if (e.getKeyCode() == KeyEvent.VK_H) {
             if (handleRepeatLeft((e.getModifiers() & shortcut_modifier) > 0)) {
                 return true;
             }
         }
-        else if (e.getKeyCode() == KeyEvent.VK_UP) {
+        else if (e.getKeyCode() == KeyEvent.VK_K) {
             if (handleRepeatUp((e.getModifiers() & shortcut_modifier) > 0)) {
                 return true;
             }
         }
-        else if (e.getKeyCode() == KeyEvent.VK_DOWN) {
+        else if (e.getKeyCode() == KeyEvent.VK_J) {
             if (handleRepeatDown((e.getModifiers() & shortcut_modifier) > 0)) {
                 return true;
             }

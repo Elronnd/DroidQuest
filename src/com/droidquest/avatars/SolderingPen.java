@@ -312,28 +312,28 @@ public class SolderingPen extends Device implements Avatar {
         else if (e.getKeyCode() == KeyEvent.VK_SLASH && handleHelp()) {
             return false;
         }
-        else if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
+        else if (e.getKeyCode() == KeyEvent.VK_L) {
             if (carriedBy == null) {
                 moveRight((e.getModifiers() & shortcut_modifier) > 0);
             }
             repeating = 0;
             return true;
         }
-        else if (e.getKeyCode() == KeyEvent.VK_LEFT) {
+        else if (e.getKeyCode() == KeyEvent.VK_H) {
             if (carriedBy == null) {
                 moveLeft((e.getModifiers() & shortcut_modifier) > 0);
             }
             repeating = 0;
             return true;
         }
-        else if (e.getKeyCode() == KeyEvent.VK_UP) {
+        else if (e.getKeyCode() == KeyEvent.VK_K) {
             if (carriedBy == null) {
                 moveUp((e.getModifiers() & shortcut_modifier) > 0);
             }
             repeating = 0;
             return true;
         }
-        else if (e.getKeyCode() == KeyEvent.VK_DOWN) {
+        else if (e.getKeyCode() == KeyEvent.VK_J) {
             if (carriedBy == null) {
                 moveDown((e.getModifiers() & shortcut_modifier) > 0);
             }
@@ -356,7 +356,7 @@ public class SolderingPen extends Device implements Avatar {
     }
 
     public boolean KeyDown(KeyEvent e) {
-        if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
+        if (e.getKeyCode() == KeyEvent.VK_L) {
             repeating++;
             if (repeating > 10) {
                 moveRight((e.getModifiers() & shortcut_modifier) > 0);
@@ -364,7 +364,7 @@ public class SolderingPen extends Device implements Avatar {
             }
             return false;
         }
-        else if (e.getKeyCode() == KeyEvent.VK_LEFT) {
+        else if (e.getKeyCode() == KeyEvent.VK_H) {
             repeating++;
             if (repeating > 10) {
                 moveLeft((e.getModifiers() & shortcut_modifier) > 0);
@@ -372,7 +372,7 @@ public class SolderingPen extends Device implements Avatar {
             }
             return false;
         }
-        else if (e.getKeyCode() == KeyEvent.VK_UP) {
+        else if (e.getKeyCode() == KeyEvent.VK_K) {
             repeating++;
             if (repeating > 10) {
                 moveUp((e.getModifiers() & shortcut_modifier) > 0);
@@ -380,7 +380,7 @@ public class SolderingPen extends Device implements Avatar {
             }
             return false;
         }
-        else if (e.getKeyCode() == KeyEvent.VK_DOWN) {
+        else if (e.getKeyCode() == KeyEvent.VK_J) {
             repeating++;
             if (repeating > 10) {
                 moveDown((e.getModifiers() & shortcut_modifier) > 0);

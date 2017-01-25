@@ -22,19 +22,19 @@ public class SpyCam extends Item implements Avatar {
     }
 
     public boolean KeyUp(KeyEvent e) {
-        if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
+        if (e.getKeyCode() == KeyEvent.VK_L) {
             SetRoom(room.rightRoom);
             return true;
         }
-        if (e.getKeyCode() == KeyEvent.VK_LEFT) {
+        if (e.getKeyCode() == KeyEvent.VK_H) {
             SetRoom(room.leftRoom);
             return true;
         }
-        if (e.getKeyCode() == KeyEvent.VK_UP) {
+        if (e.getKeyCode() == KeyEvent.VK_K) {
             SetRoom(room.upRoom);
             return true;
         }
-        if (e.getKeyCode() == KeyEvent.VK_DOWN) {
+        if (e.getKeyCode() == KeyEvent.VK_J) {
             SetRoom(room.downRoom);
             return true;
         }
