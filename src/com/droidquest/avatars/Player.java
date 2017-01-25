@@ -274,12 +274,12 @@ public class Player extends Item implements Avatar {
 
     public boolean handleMoveDown(boolean isShiftDown, boolean isControlDown) {
         if (isCheatMode()) {
-            if (isShiftDown && room != null) {
+            if (isControlDown && room != null) {
                 SetRoom(room.downRoom);
             }
         }
         if (carriedBy == null) {
-            moveDown(isControlDown);
+            moveDown(isShiftDown);
         }
         repeating = 0;
         return true;
@@ -287,12 +287,12 @@ public class Player extends Item implements Avatar {
 
     public boolean handleMoveUp(boolean isShiftDown, boolean isControlDown) {
         if (isCheatMode()) {
-            if (isShiftDown && room != null) {
+            if (isControlDown && room != null) {
                 SetRoom(room.upRoom);
             }
         }
         if (carriedBy == null) {
-            moveUp(isControlDown);
+            moveUp(isShiftDown);
         }
         repeating = 0;
         return true;
@@ -300,12 +300,12 @@ public class Player extends Item implements Avatar {
 
     public boolean handleMoveLeft(boolean isShiftDown, boolean isControlDown) {
         if (isCheatMode()) {
-            if (isShiftDown && room != null) {
+            if (isControlDown && room != null) {
                 SetRoom(room.leftRoom);
             }
         }
         if (carriedBy == null) {
-            moveLeft(isControlDown);
+            moveLeft(isShiftDown);
         }
         repeating = 0;
         return true;
@@ -313,12 +313,12 @@ public class Player extends Item implements Avatar {
 
     public boolean handleMoveRight(boolean isShiftDown, boolean isControlDown) {
         if (isCheatMode()) {
-            if (isShiftDown && room != null) {
+            if (isControlDown && room != null) {
                 SetRoom(room.rightRoom);
             }
         }
         if (carriedBy == null) {
-            moveRight(isControlDown);
+            moveRight(isShiftDown);
         }
         repeating = 0;
         return true;
